@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — ARADHYA</title>
-<meta name="description" content="About Aradhya Jadaun, a Jaipur-based photographer shooting portraits, street, and landscape work.">
-<meta property="og:title" content="About — Aradhya Jadaun">
-<meta property="og:description" content="About Aradhya Jadaun, a Jaipur-based photographer shooting portraits, street, and landscape work.">
+<title>Contact — ARADHYA</title>
+<meta name="description" content="Get in touch with Aradhya Jadaun for shoots and collaborations.">
+<meta property="og:title" content="Contact — Aradhya Jadaun">
+<meta property="og:description" content="Get in touch with Aradhya Jadaun for shoots and collaborations.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,37 +22,40 @@
   <a href="index.html" class="nav__mark">A—J</a>
   <nav class="nav__links">
     <a href="work.html">Work</a>
-    <a href="about.html" class="active-link">About</a>
+    <a href="about.html">About</a>
     <a href="feedback.html">Feedback</a>
-    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="contact.html" class="active-link">Contact</a>
   </nav>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
     <span></span><span></span>
   </button>
 </header>
 
-<section class="page-head">
-  <p class="eyebrow">Roll 00</p>
-  <h1 class="page-head__title">About</h1>
+<section class="contact contact--page" id="contact">
+  <div class="contact__inner">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="contact__title">Got a shoot<br>in mind?</h2>
+    <form class="contact__form" id="contactForm">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="message">What are you shooting?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send message</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
 </section>
 
-<section class="about" id="about">
-  <div class="about__label">
-    <span class="frame-no">00</span>
-    <p class="eyebrow">Aradhya Jadaun</p>
-  </div>
-  <div class="about__body">
-    <div class="about__meta">
-      <div class="meta__row"><span>Based in</span><span>Jaipur, India</span></div>
-      <div class="meta__row"><span>Shoots</span><span>Portrait · Street · Landscape</span></div>
-      <div class="meta__row"><span>Gear</span><span>Canon 1500D, 50mm f/1.8, occasionally a phone</span></div>
-      <div class="meta__row"><span>Studying</span><span>B.Tech, SKIT Jaipur</span></div>
-      <div class="meta__row"><span>Available for</span><span>Campus events, small shoots</span></div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
+<footer class="footer footer--dark">
   <span>© 2026 Aradhya Jadaun</span>
   <div class="footer__socials">
     <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
