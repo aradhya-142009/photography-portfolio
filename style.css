@@ -514,3 +514,64 @@ body {
     text-align: center;
   }
 }
+/* =========================================================
+   INFINITE MOVING FILMSTRIP (ANIMATION FIX)
+   ========================================================= */
+/* Container jiske andar images move karengi */
+.sheet {
+  display: flex !important; /* Grid hatakar Flexbox use karein */
+  flex-direction: row;
+  width: max-content; /* Content ke hisaab se width */
+  gap: 1.2rem; /* Images ke beech ka gap */
+  animation: scrollLinear 25s linear infinite; /* Animation apply karein */
+  padding: 1rem 0;
+  will-change: transform;
+}
+
+/* Base style har image frame ke liye */
+.frame {
+  flex: 0 0 260px; /* Har image ki width 260px fixed rahegi */
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5; /* Verticle ratio maintain rahega */
+  border: 1px solid var(--frame-line);
+}
+
+/* Image scaling aur aspect ratio fit karna */
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stretch hone se rokna */
+  display: block;
+}
+
+/* Hover par animation pause karne ke liye (Option: scroll ruk jaye) */
+/* .work:hover .sheet {
+  animation-play-state: paused;
+} */
+
+/* Infinite scroll animation keyframes */
+@keyframes scrollLinear {
+  0% {
+    transform: translateX(0); /* Shuruat 0 se */
+  }
+  100% {
+    /* Pura set move ho jane tak ka distance.
+       -50% standard hai agar content loop mein cloned hai. */
+    transform: translateX(-50%);
+  }
+}
+
+/* Work section container ka padding */
+.work {
+  overflow: hidden; /* Bahar nikalne wali images chhupane ke liye */
+  padding: 2rem;
+}
+
+/* Work head/title layout setting */
+.work__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
