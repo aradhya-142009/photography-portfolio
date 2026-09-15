@@ -2,18 +2,16 @@
    VARIABLES & DESIGN SYSTEM
    ========================================================= */
 :root {
-  --ink: #0f0e0d;
-  --paper: #f4f1ea;
-  --paper-2: #e8e3d8;
-  --ash: #8c857b;
-  --frame-line: #2a2723;
-  --accent: #d95338;
+  --ink: #fff8f5;        /* Background: Soft Peach / Cream */
+  --paper: #2b2320;      /* Main Text: Deep Warm Brown */
+  --paper-2: #ffe5db;    /* Card & Frame Background: Light Peach */
+  --ash: #8a7871;        /* Subtitle / Minor Text */
+  --frame-line: #ecd1c7;  /* Borders: Warm Rose Line */
+  --accent: #e06d53;     /* Buttons & Highlights: Vibrant Peach-Coral */
   --cyan: #4a90e2;
-
   --font-display: 'Fraunces', serif;
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-
   --max: 1280px;
 }
 
