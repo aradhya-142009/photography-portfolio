@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — ARADHYA</title>
+<meta name="description" content="Login page for Aradhya Jadaun's photography portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="nav__mark">A—J</a>
+  <nav class="nav__links">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html" class="active-link">Login</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- ===== LOGIN ===== -->
+<section class="auth">
+  <div class="auth__card">
+    <p class="eyebrow">Roll 05</p>
+    <h1 class="auth__title">Welcome back</h1>
+    <p class="auth__sub">Log in to manage bookings and saved shoots.</p>
+
+    <form class="auth__form" id="loginForm">
+      <div class="field">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" name="loginEmail" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" required autocomplete="current-password">
+      </div>
+
+      <div class="auth__row">
+        <label class="auth__remember">
+          <input type="checkbox" id="rememberMe">
+          <span>Remember me</span>
+        </label>
+        <a href="#" class="auth__link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="submit-btn submit-btn--full">Log in</button>
+      <p class="form-status" id="loginStatus"></p>
+    </form>
+
+    <p class="auth__switch">Don't have an account? <a href="#" class="auth__link">Sign up</a></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 Aradhya Jadaun</span>
+  <div class="footer__socials">
+    <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <span>Shot in Jaipur, developed in a browser.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
