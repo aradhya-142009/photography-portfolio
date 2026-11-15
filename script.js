@@ -31,6 +31,20 @@ if (chatToggle && chatPanel) {
 
   let conversationHistory = [];
 
+  const FALLBACK_REPLIES = {
+    pricing: "The price range for a shoot is ₹5,000 - ₹15,000, depending on the type of shoot, duration and customization.",
+    availability: "I'm available on most weekends and select weekdays. For exact dates, please check with me on WhatsApp.",
+    gear: "I shoot on a Canon 1500D with a 50mm f/1.8 lens.",
+    location: "I'm based in Jaipur, India, and happy to travel for small shoots."
+  };
+
+  function getFallback(text) {
+    const t = text.toLowerCase();
+    for (const key in FALLBACK_REPLIES) {
+      if (t.includes(key)) return FALLBACK_REPLIES[key];
+    }
+    return null;
+  }
   function addMessage(text, who) {
     const el = document.createElement('div');
     el.className = `chat-msg chat-msg--${who}`;
